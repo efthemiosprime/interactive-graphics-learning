@@ -1,0 +1,39 @@
+export const theoryContent = {
+  vector: {
+    addition: { title: 'Vector Addition', explanation: 'Vector addition combines two vectors by adding their corresponding components. Geometrically, it means placing vectors head-to-tail.', formula: '(a₁, a₂) + (b₁, b₂) = (a₁+b₁, a₂+b₂)', applications: 'Used in physics for combining forces, velocities, and displacements.' },
+    subtraction: { title: 'Vector Subtraction', explanation: 'Vector subtraction finds the difference between two vectors. It\'s equivalent to adding the negative of the second vector.', formula: '(a₁, a₂) - (b₁, b₂) = (a₁-b₁, a₂-b₂)', applications: 'Used to find displacement between two points or relative velocities.' },
+    dot: { title: 'Dot Product', explanation: 'The dot product multiplies corresponding components and sums them. It measures how much two vectors "align" with each other. Results in a scalar (single number).', formula: 'a · b = a₁b₁ + a₂b₂ = |a||b|cos(θ)', applications: 'Used for work calculations, lighting in graphics, checking orthogonality.' },
+    magnitude: { title: 'Vector Magnitude', explanation: 'Magnitude is the length or size of a vector, calculated using the Pythagorean theorem.', formula: '|v| = √(x² + y²)', applications: 'Used to find distance, speed, or to normalize vectors for direction-only calculations.' },
+    normalize: { title: 'Vector Normalization', explanation: 'Normalizing creates a unit vector (length = 1) pointing in the same direction. Divide each component by the magnitude.', formula: 'v̂ = v / |v|', applications: 'Used for directions (lights, normals in graphics), creating consistent scale-independent representations.' },
+    cross: { title: 'Cross Product (2D)', explanation: 'In 2D, cross product gives a scalar representing the perpendicular component. Measures how perpendicular two vectors are.', formula: 'a × b = a₁b₂ - a₂b₁', applications: 'Used to find area of parallelogram, detect if vectors turn left/right, important in 3D for surface normals.' },
+    angle2d: { title: 'Angle Between (2D)', explanation: 'Find the angle between two 2D vectors using the dot product formula. Tells you how aligned the vectors are.', formula: 'θ = arccos(a·b / |a||b|)', applications: 'Finding angles in geometry, checking alignment, collision detection in games.' },
+    projection2d: { title: 'Vector Projection (2D)', explanation: 'Project one vector onto another, showing how much of the first vector points in the direction of the second.', formula: 'proj_b(a) = (a·b / |b|²) × b', applications: 'Finding components along directions, decomposing forces, shadow calculations.' },
+    reflection: { title: 'Vector Reflection', explanation: 'Reflect a vector across the X-axis or Y-axis. Useful for bouncing and mirror effects.', formula: 'Reflect X: (x, -y), Reflect Y: (-x, y)', applications: 'Game physics (ball bouncing), mirror effects, symmetric transformations.' },
+    perpendicular: { title: 'Perpendicular Vector', explanation: 'Find a vector perpendicular to the given vector. In 2D, rotate 90° counterclockwise.', formula: 'Perpendicular to (x, y) = (-y, x)', applications: 'Finding normal directions, creating orthogonal bases, rotations.' }
+  },
+  matrix: {
+    addition: { title: 'Matrix Addition', explanation: 'Add corresponding elements from each matrix. Only works for matrices of the same dimensions.', formula: '[a b] + [e f] = [a+e b+f]', applications: 'Used in image processing, data analysis, and combining transformations.' },
+    subtraction: { title: 'Matrix Subtraction', explanation: 'Subtract corresponding elements. Like addition but with subtraction on each pair.', formula: '[a b] - [e f] = [a-e b-f]', applications: 'Used for finding differences in datasets or computing matrix changes.' },
+    multiply: { title: 'Matrix Multiplication', explanation: 'Multiply rows of first matrix by columns of second. More complex than element-wise. Result dimensions: (m×n) × (n×p) = (m×p).', formula: 'Each element = sum of products of corresponding row and column elements', applications: 'Composing transformations, solving linear systems, computer graphics transformations.' },
+    determinant: { title: 'Determinant', explanation: 'A scalar value that tells us about the matrix. If determinant = 0, the matrix is singular (not invertible).', formula: 'det(2×2) = ad - bc', applications: 'Checking if matrix is invertible, finding volume scaling factor, solving linear equations.' },
+    transpose: { title: 'Matrix Transpose', explanation: 'Flip the matrix over its diagonal: rows become columns and columns become rows.', formula: 'If A[i,j], then Aᵀ[j,i]', applications: 'Used in solving systems of equations, physics calculations, and switching between row and column representations.' },
+    apply: { title: 'Apply Matrix to Vector', explanation: 'Transform a vector using a matrix by treating the vector as a column. This applies the matrix transformation to the vector.', formula: '[a b] [x] = [ax+by]', applications: 'Rotating, scaling, or skewing points in graphics; applying linear transformations.' },
+    inverse: { title: 'Matrix Inverse', explanation: 'The inverse matrix, when multiplied with the original, gives identity matrix I. Only exists if determinant ≠ 0.', formula: 'A × A⁻¹ = I (identity matrix)', applications: 'Solving equations Ax=b (x=A⁻¹b), undoing transformations, finding solutions to systems.' }
+  },
+  advanced: {
+    crossproduct3d: { title: '3D Cross Product', explanation: 'Produces a vector perpendicular to both input vectors. Magnitude equals area of parallelogram formed by the vectors.', formula: 'a × b = (a₂b₃-a₃b₂, a₃b₁-a₁b₃, a₁b₂-a₂b₁)', applications: 'Finding surface normals, computing torque, determining orientation in 3D graphics.' },
+    dotproduct3d: { title: '3D Dot Product', explanation: 'Same concept as 2D: multiply components and sum. Tells us the angle between vectors in 3D space.', formula: 'a · b = a₁b₁ + a₂b₂ + a₃b₃ = |a||b|cos(θ)', applications: 'Lighting calculations, checking perpendicularity, projecting vectors, finding angles.' },
+    projection: { title: 'Vector Projection', explanation: 'Projects one vector onto another, showing the component of first vector in the direction of second vector.', formula: 'proj_b(a) = (a·b / |b|²) × b', applications: 'Finding component of force along a direction, breaking vectors into parallel and perpendicular parts.' },
+    angle: { title: 'Angle Between Vectors', explanation: 'Finds the angle between two vectors using dot product. Ranges from 0° (same direction) to 180° (opposite).', formula: 'θ = arccos(a·b / |a||b|)', applications: 'Finding angles in geometry, checking how aligned vectors are, computer vision and robotics.' },
+    magnitude3d: { title: '3D Vector Magnitude', explanation: 'Length of a 3D vector, extended from 2D formula using Pythagorean theorem in 3D.', formula: '|v| = √(x² + y² + z²)', applications: 'Distance in 3D space, speed calculations, normalizing for direction.' },
+    normalize3d: { title: '3D Vector Normalization', explanation: 'Creates a unit vector (length = 1) in the same direction as the original 3D vector.', formula: 'v̂ = v / |v|', applications: 'Surface normals, light directions, camera orientations in 3D graphics.' }
+  }
+};
+
+export const getCurrentTheory = (mode, selectedOperation) => {
+  if (mode === 'vector' && theoryContent.vector[selectedOperation]) return theoryContent.vector[selectedOperation];
+  if (mode === 'matrix' && theoryContent.matrix[selectedOperation]) return theoryContent.matrix[selectedOperation];
+  if (mode === 'advanced' && theoryContent.advanced[selectedOperation]) return theoryContent.advanced[selectedOperation];
+  return null;
+};
+
