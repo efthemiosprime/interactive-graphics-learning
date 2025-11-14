@@ -4,14 +4,19 @@
 
 ### Step 1: Enable GitHub Pages in Repository Settings
 
+**IMPORTANT**: You must do this step FIRST before the workflow can run!
+
 1. Go to your repository on GitHub: `https://github.com/efthemiosprime/interactive-graphics-learning`
 2. Click on **Settings** (top menu)
 3. Scroll down to **Pages** in the left sidebar
-4. Under **Source**, select:
+4. Under **Source**, click the dropdown and select:
    - **GitHub Actions** (recommended - this is the modern way)
 5. Click **Save**
 
-**Note**: If you see "Deploy from a branch" selected, click on it and choose **GitHub Actions** instead.
+**Note**: 
+- If you see "Deploy from a branch" selected, click on it and choose **GitHub Actions** instead
+- You may need to wait a moment after saving for GitHub to enable Pages
+- After enabling, you can re-run the workflow from the Actions tab
 
 ### Step 2: Deploy to GitHub Pages
 
