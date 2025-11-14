@@ -8,22 +8,29 @@
 2. Click on **Settings** (top menu)
 3. Scroll down to **Pages** in the left sidebar
 4. Under **Source**, select:
-   - **Branch**: `gh-pages`
-   - **Folder**: `/ (root)`
+   - **GitHub Actions** (recommended - this is the modern way)
 5. Click **Save**
+
+**Note**: If you see "Deploy from a branch" selected, click on it and choose **GitHub Actions** instead.
 
 ### Step 2: Deploy to GitHub Pages
 
-Run the deployment command:
+The deployment will happen automatically! Here's how:
 
-```bash
-npm run deploy
-```
+**Option A: Automatic Deployment (Recommended)**
+- Every time you push to the `main` branch, GitHub Actions will automatically build and deploy your site
+- Just commit and push your changes:
+  ```bash
+  git add .
+  git commit -m "Your changes"
+  git push
+  ```
 
-This will:
-- Build your project for production
-- Create/update the `gh-pages` branch
-- Push the built files to GitHub
+**Option B: Manual Deployment**
+- Go to the **Actions** tab in your repository
+- Click on "Deploy to GitHub Pages" workflow
+- Click "Run workflow" button
+- Select the `main` branch and click "Run workflow"
 
 ### Step 3: Wait for Deployment
 
